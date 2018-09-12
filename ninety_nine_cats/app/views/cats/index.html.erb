@@ -1,0 +1,11 @@
+<h1>THESE ARE ALL YO CATS</h1>
+
+
+<ul>
+  <% @cats.each do |cat| %>
+  <li>
+    <%= render 'cat_attributes', cat: cat %>
+    
+  </li>
+  <% end %>
+<ul>
