@@ -3433,3 +3433,26 @@ Processing by CatsController#index as HTML
 Completed 200 OK in 115ms (Views: 109.0ms | ActiveRecord: 5.2ms)
 
 
+Started GET "/cats" for 127.0.0.1 at 2018-09-11 17:24:59 -0700
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/var/rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+
+ActiveRecord::PendingMigrationError - Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+:
+
+Started POST "/__better_errors/3098b03cd6594508/variables" for 127.0.0.1 at 2018-09-11 17:24:59 -0700
+Started GET "/cats" for 127.0.0.1 at 2018-09-11 17:25:35 -0700
+Processing by CatsController#index as HTML
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (1.0ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:5
+  Rendered cats/_cat_attributes.html.erb (1.4ms)
+  Rendered cats/_cat_attributes.html.erb (0.2ms)
+  Rendered cats/_cat_attributes.html.erb (1.0ms)
+  Rendered cats/index.html.erb within layouts/application (47.0ms)
+Completed 200 OK in 175ms (Views: 107.7ms | ActiveRecord: 15.4ms)
+
+

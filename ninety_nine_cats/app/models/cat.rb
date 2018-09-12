@@ -8,4 +8,5 @@ class Cat < ApplicationRecord
   def age
    created_at.year - birth_date.year
   end
+
 end
